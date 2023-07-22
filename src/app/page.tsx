@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { SearchOutlined, AppstoreOutlined, NodeIndexOutlined, PushpinOutlined, GithubOutlined } from '@ant-design/icons';
 import type { MenuProps, MenuTheme } from 'antd';
 import { Menu, Switch } from 'antd';
@@ -11,6 +11,7 @@ import './css/home.css'
 export default function Home() {
   const [current, setCurrent] = useState('navi');
   const [theme, setTheme] = useState<MenuTheme>('light');
+  const [size, setSize] = useState([0, 0]);
 
   const onClick: MenuProps['onClick'] = (e) => {
     if (['navi', 'search'].includes(e.key)) {
@@ -98,9 +99,21 @@ export default function Home() {
     // },
   ];
 
+  useLayoutEffect(() => {
+    const updateSize = (): void => {
+      setSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener('resize', updateSize);
+    updateSize();
+
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
   return (
     <>
       <Menu
+        className={size[0] > 1600 ? 'header-large-width' : ''}
         onClick={onClick}
         selectedKeys={[current]}
         mode="horizontal"

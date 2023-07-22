@@ -1,0 +1,11 @@
+#google_searchComp button,
+#google_zh_searchComp button,
+#baidu_searchComp button{
+  background-color: #1677ff;
+}
+
+#acgnx_searchComp button,
+#goo_searchComp button,
+#weblio_searchComp button{
+  background-color: #cc2d2d;
+}

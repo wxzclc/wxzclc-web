@@ -37,6 +37,22 @@ const SearchPage: React.FC = () => {
         return 'https://share.acgnx.se/search.php?sort_id=0&keyword=' + encodeURIComponent(keyWord);
       }
     },
+    {
+      dividerText: 'goo辞書',
+      placeholder: '搜索goo词典',
+      searchTarget: 'goo',
+      getSearchURL: (keyWord: string)=> {
+        return 'https://dictionary.goo.ne.jp/srch/all/' + encodeURIComponent(keyWord) + '/m0u/';
+      }
+    },
+    {
+      dividerText: 'weblio日中・中日辞書',
+      placeholder: '搜索weblio词典',
+      searchTarget: 'weblio',
+      getSearchURL: (keyWord: string)=> {
+        return 'https://cjjc.weblio.jp/content/' + encodeURIComponent(keyWord);
+      }
+    },
   ]
   return (
     <>

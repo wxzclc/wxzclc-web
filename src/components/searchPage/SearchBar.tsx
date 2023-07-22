@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Input, Divider } from 'antd';
 import { HeatMapOutlined } from '@ant-design/icons';
 import { SearchDividerStyle } from '@/app/css/CSSProperties';
+import './css/search.css'
 
 const { Search } = Input;
 
@@ -21,12 +22,12 @@ const SearchBar: React.FC<SearchBarProps> = (props) => {
     }
   }
   return (
-    <>
+    <div id={props.searchTarget + "_searchComp"}>
       <Divider orientation='left' style={SearchDividerStyle}>
         <HeatMapOutlined /> {props.dividerText}
       </Divider>
       <Search placeholder={props.placeholder} allowClear showCount onSearch={onSearch} enterButton />
-    </>
+    </div>
   )
 }
 

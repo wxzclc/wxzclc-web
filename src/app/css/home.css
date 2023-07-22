@@ -3,6 +3,10 @@ body {
   background-size: cover;
 }
 
+.header-large-width {
+  justify-content: center;
+}
+
 .page-background {
   height: calc(100vh - 62px);
 }
