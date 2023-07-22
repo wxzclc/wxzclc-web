@@ -1,0 +1,8 @@
+body {
+  background-image: url('/img/bg_1012-w.jpg');
+  background-size: cover;
+}
+
+.page-background {
+  height: calc(100vh - 62px);
+}

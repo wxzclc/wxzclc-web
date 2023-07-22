@@ -5,21 +5,22 @@ import type { MenuProps, MenuTheme } from 'antd';
 import { Menu, Switch } from 'antd';
 import SearchPage from '@/components/searchPage/SearchPage';
 import NaviPage from '@/components/naviPage/NaviPage';
+import { HeaderStyle } from './css/CSSProperties';
+import './css/home.css'
 
 export default function Home() {
   const [current, setCurrent] = useState('navi');
   const [theme, setTheme] = useState<MenuTheme>('light');
 
   const onClick: MenuProps['onClick'] = (e) => {
-    console.log('click ', e);
-    if ( ['navi', 'search'].includes(e.key)) {
+    if (['navi', 'search'].includes(e.key)) {
       setCurrent(e.key);
     }
   };
 
-  const changeTheme = (value: boolean) => {
-    setTheme(value ? 'dark' : 'light');
-  };
+  // const changeTheme = (value: boolean) => {
+  //   setTheme(value ? 'dark' : 'light');
+  // };
 
   const items: MenuProps['items'] = [
     {
@@ -82,19 +83,19 @@ export default function Home() {
       key: 'github',
       icon: <GithubOutlined />,
     },
-    {
-      label: (
-        <Switch
-          checked={theme === 'dark'}
-          onChange={changeTheme}
-          checkedChildren="Dark"
-          unCheckedChildren="Light"
-        />
-      ),
-      key: 'changeTheme',
-      icon: <PushpinOutlined />,
-      disabled: true,
-    },
+    // {
+    //   label: (
+    //     <Switch
+    //       checked={theme === 'dark'}
+    //       onChange={changeTheme}
+    //       checkedChildren="Dark"
+    //       unCheckedChildren="Light"
+    //     />
+    //   ),
+    //   key: 'changeTheme',
+    //   icon: <PushpinOutlined />,
+    //   disabled: true,
+    // },
   ];
 
   return (
@@ -104,9 +105,16 @@ export default function Home() {
         selectedKeys={[current]}
         mode="horizontal"
         items={items}
-        theme={theme} />
-      { current === 'navi' && <NaviPage />}
-      { current === 'search' && <SearchPage />}
+        theme={theme}
+        style={HeaderStyle} />
+      {/* <Background>
+        { current === 'navi' && <NaviPage />}
+        { current === 'search' && <SearchPage />}
+      </Background> */}
+      <div className='page-background'>
+        {current === 'navi' && <NaviPage />}
+        {current === 'search' && <SearchPage />}
+      </div>
     </>
   )
 }
