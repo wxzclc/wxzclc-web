@@ -8,7 +8,6 @@ import { getPicPrefix } from '@/utils/commonFuncs';
 const inter = Inter({ subsets: ['latin'] })
 
 const BodyStyle: React.CSSProperties = {
-  // backgroundImage: 'url("/img/bg_1012-w.jpg")',
   backgroundImage: `url("${getPicPrefix("/img/bg_1012-w.jpg")}")`,
   backgroundSize: 'cover',
 };

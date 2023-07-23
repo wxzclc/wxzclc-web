@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect, useEffect, useRef } from 'react';
 import { SearchOutlined, AppstoreOutlined, NodeIndexOutlined, PushpinOutlined, GithubOutlined } from '@ant-design/icons';
 import type { MenuProps, MenuTheme } from 'antd';
 import { Menu, Switch } from 'antd';
@@ -12,6 +12,11 @@ export default function Home() {
   const [current, setCurrent] = useState('navi');
   const [theme, setTheme] = useState<MenuTheme>('light');
   const [size, setSize] = useState([0, 0]);
+  const [newWorldFlg, setNewWorldFlg] = useState(false);
+  const newWorldStepRef = useRef(0);
+  const newWorldTimerIdRef = useRef(0);
+
+  const openNewWorldKeyList = process.env.NEXT_PUBLIC_NEW_WORLD_KEY ? process.env.NEXT_PUBLIC_NEW_WORLD_KEY.split(',') : [];
 
   const onClick: MenuProps['onClick'] = (e) => {
     if (['navi', 'search'].includes(e.key)) {
@@ -110,6 +115,49 @@ export default function Home() {
     return () => window.removeEventListener('resize', updateSize);
   }, []);
 
+  useEffect(() => {
+    if (openNewWorldKeyList.length > 0) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (!newWorldFlg) {
+          // 判定未开始，切按键非列表中第一个，直接结束
+          if (newWorldStepRef.current === 0 && event.key !== openNewWorldKeyList[0]) {
+            return;
+          } else {
+            if (event.key === openNewWorldKeyList[newWorldStepRef.current]) {
+              // 判定步数+1
+              newWorldStepRef.current += 1;
+              // 判定步数已满，开启
+              if (newWorldStepRef.current === openNewWorldKeyList.length) {
+                setNewWorldFlg(true);
+                document.removeEventListener('keydown', handleKeyDown, false);
+                return;
+              } else {
+                // 继续，取消上一步的计时器
+                window.clearTimeout(newWorldTimerIdRef.current);
+              }
+              // 本步计时器开始
+              newWorldTimerIdRef.current = window.setTimeout(() => {
+                newWorldStepRef.current = 0;
+                newWorldTimerIdRef.current = 0;
+              }, 3000);
+            } else {
+              // 输入错误，结束本次判定
+              newWorldStepRef.current = 0;
+              newWorldTimerIdRef.current = 0;
+              return;
+            }
+          }
+        }
+      }
+
+      document.addEventListener('keydown', handleKeyDown, false)
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown, false)
+      }
+    }
+  }, [])
+
   return (
     <>
       <Menu
@@ -120,12 +168,8 @@ export default function Home() {
         items={items}
         theme={theme}
         style={HeaderStyle} />
-      {/* <Background>
-        { current === 'navi' && <NaviPage />}
-        { current === 'search' && <SearchPage />}
-      </Background> */}
       <div className='page-background'>
-        {current === 'navi' && <NaviPage />}
+        {current === 'navi' && <NaviPage newWorldFlg={newWorldFlg} />}
         {current === 'search' && <SearchPage />}
       </div>
     </>
