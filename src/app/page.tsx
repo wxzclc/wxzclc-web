@@ -17,8 +17,6 @@ export default function Home() {
   const newWorldTimerIdRef = useRef(0);
 
   const openNewWorldKeyList = process.env.NEXT_PUBLIC_NEW_WORLD_KEY ? process.env.NEXT_PUBLIC_NEW_WORLD_KEY.split(',') : [];
-  console.log("process.env.NEXT_PUBLIC_NEW_WORLD_KEY:",process.env.NEXT_PUBLIC_NEW_WORLD_KEY)
-  console.log("openNewWorldKeyList:",openNewWorldKeyList);
 
   const onClick: MenuProps['onClick'] = (e) => {
     if (['navi', 'search'].includes(e.key)) {
