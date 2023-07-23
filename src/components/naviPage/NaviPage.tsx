@@ -5,7 +5,8 @@ import { SearchOutlined, AppstoreOutlined, NodeIndexOutlined, PushpinOutlined } 
 const NaviPage: React.FC = () => {
   return (
     <>
-      <div>naviiiiiiiiiiiiiiiii</div>
+      <div>asdasd</div>
+      <div>asdd</div>
     </>
   )
 }
