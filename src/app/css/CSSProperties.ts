@@ -6,6 +6,12 @@ export const HeaderStyle: React.CSSProperties = {
   borderRadius: '5px'
 };
 
+// header menu item
+export const HeaderMenuItemStyle: React.CSSProperties = {
+  width: 'auto',
+};
+
+
 // 搜索组件分割线
 export const SearchDividerStyle: React.CSSProperties = {
   color: 'rgba(255,255,240,0.75)',

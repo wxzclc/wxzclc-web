@@ -6,24 +6,24 @@ import SearchBar from './SearchBar';
 const SearchPage: React.FC = () => {
   const searchPropsList = [
     {
-      dividerText: 'google search',
-      placeholder: 'google search',
+      dividerText: 'google搜索',
+      placeholder: 'google搜索',
       searchTarget: 'google',
       getSearchURL: (keyWord: string)=> {
         return 'https://www.google.com/search?q=' + encodeURIComponent(keyWord);
       }
     },
     {
-      dividerText: 'google search(搜索中文结果)',
-      placeholder: 'google search(搜索中文结果)',
+      dividerText: 'google搜索(中文结果)',
+      placeholder: 'google搜索(中文结果)',
       searchTarget: 'google_zh',
       getSearchURL: (keyWord: string)=> {
         return 'https://www.google.com/search?q=' + encodeURIComponent(keyWord) + '&lr=lang_zh-CN';
       }
     },
     {
-      dividerText: 'baidu search',
-      placeholder: 'baidu search',
+      dividerText: '百度搜索',
+      placeholder: '百度搜索',
       searchTarget: 'baidu',
       getSearchURL: (keyWord: string)=> {
         return 'https://www.baidu.com/s?wd=' + encodeURIComponent(keyWord);

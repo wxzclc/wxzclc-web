@@ -1,11 +1,11 @@
 "use client"
 import React, { useState, useLayoutEffect, useEffect, useRef } from 'react';
-import { SearchOutlined, AppstoreOutlined, NodeIndexOutlined, PushpinOutlined, GithubOutlined } from '@ant-design/icons';
+import { SearchOutlined, AppstoreOutlined, NodeIndexOutlined, PushpinOutlined, GithubOutlined, ManOutlined, ContainerOutlined } from '@ant-design/icons';
 import type { MenuProps, MenuTheme } from 'antd';
 import { Menu, Switch } from 'antd';
 import SearchPage from '@/components/searchPage/SearchPage';
 import NaviPage from '@/components/naviPage/NaviPage';
-import { HeaderStyle } from './css/CSSProperties';
+import { HeaderStyle, HeaderMenuItemStyle } from './css/CSSProperties';
 import './css/home.css'
 
 export default function Home() {
@@ -46,29 +46,19 @@ export default function Home() {
       children: [
         {
           type: 'group',
-          label: 'Item 1',
+          label: (
+            <><ContainerOutlined /> blog</>
+          ),
           children: [
             {
-              label: 'Option 1',
+              label: (
+                <a href='https://readm.tech/' target="_blank">
+                  Readm的个人博客
+                </a>
+              ),
               key: 'setting:1',
-            },
-            {
-              label: 'Option 2',
-              key: 'setting:2',
-            },
-          ],
-        },
-        {
-          type: 'group',
-          label: 'Item 2',
-          children: [
-            {
-              label: 'Option 3',
-              key: 'setting:3',
-            },
-            {
-              label: 'Option 4',
-              key: 'setting:4',
+              icon: (<ManOutlined /> ),
+              style: HeaderMenuItemStyle
             },
           ],
         },
