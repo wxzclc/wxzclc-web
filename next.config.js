@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const isProd = process.env.NODE_ENV === 'production'
-const prefixPath = isProd ? '/sub-derectory' : ''
+const prefixPath = isProd ? 'wxzclc-web/' : ''
 
 const nextConfig = {
   output: "export",
