@@ -76,7 +76,7 @@ export default function Home() {
         message: '姿势错误',
         description:
           '打开方式不正确。',
-        icon: <EyeInvisibleOutlined style={{ color: '#108ee9' }} />,
+        icon: <EyeInvisibleOutlined style={{ color: '#b22222' }} />,
       });
     } else if (newWorldFlg && !waitCloseNewWorldRef.current){
       waitCloseNewWorldRef.current = true;
