@@ -2,7 +2,7 @@
 import React, { useState, useLayoutEffect, useEffect, useRef } from 'react';
 import type { MenuProps, MenuTheme } from 'antd';
 import { Menu, notification, Popconfirm } from 'antd';
-import { EyeInvisibleOutlined, AlertOutlined } from '@ant-design/icons';
+import { EyeInvisibleOutlined, AlertOutlined, KeyOutlined } from '@ant-design/icons';
 import SearchPage from '@/components/searchPage/SearchPage';
 import NaviPage from '@/components/naviPage/NaviPage';
 import { headerItems } from '@/components/header/headerList';
@@ -41,6 +41,12 @@ export default function Home() {
           if (newWorldStepRef.current === openNewWorldKeyList.length) {
             setNewWorldFlg(true);
             document.removeEventListener('keydown', handleKeyDown, false);
+            api.open({
+              message: '姿势正确',
+              description:
+                '新世界的大门已开启。',
+              icon: <KeyOutlined style={{ color: '#2e8b57' }} />,
+            });
             // 重置判定
             newWorldStepRef.current = 0;
             newWorldTimerIdRef.current = 0;
