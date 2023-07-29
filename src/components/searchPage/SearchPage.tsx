@@ -14,7 +14,7 @@ const SearchPage: React.FC<SearchPage> = (props) => {
       <Row>
         <Col offset={2} span={20} xxl={{ offset: 4, span: 16 }}>
           {searchList.map((searchItem: any) => {
-            if (props.newWorldFlg || (!props.newWorldFlg && searchItem.newWorldFlg == false)) {
+            if (props.newWorldFlg || searchItem.newWorldFlg == false) {
               return (
                 <SearchBar
                   key={searchItem.searchTarget}
