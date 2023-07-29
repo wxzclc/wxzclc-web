@@ -38,7 +38,9 @@ export const NaviButtonStyle: React.CSSProperties = {
 
 // 导航页按钮
 export const NaviButtonPStyle: React.CSSProperties = {
-  overflow: 'auto',
+  width: '4em',
+  maxHeight: '1.5em',
+  overflow: 'revert',
   margin: 0,
 };
 
