@@ -12,12 +12,6 @@ interface NaviProps {
 
 const NaviPage: React.FC<NaviProps> = (props) => {
   const [naviGroups, setNaviGroups] = useState(Array<NaviGroupType>);
-  // const loadingStyle: React.CSSProperties = {
-  //   color: 'rgba(255,255,255,0.88)',
-  //   fontSize: '2em',
-  //   textAlign: 'center',
-  //   paddingTop: '35vh',
-  // };
 
   const getNaviGroups = () => {
     const groups = [];

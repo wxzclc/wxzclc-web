@@ -1,9 +1,8 @@
 "use client"
-import React, { useCallback, useState } from 'react';
-import { Button, Image } from 'antd';
+import React from 'react';
+import { Button } from 'antd';
 import { NaviItemStyle, NaviButtonStyle, NaviButtonPStyle } from '@/app/css/CSSProperties';
 import { NaviItem as NaviItemType } from '@/config/config';
-import Item from 'antd/es/list/Item';
 
 interface naviItemProps {
   naviItem: NaviItemType,

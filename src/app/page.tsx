@@ -20,6 +20,9 @@ export default function Home() {
   const waitCloseNewWorldRef = useRef(false);
 
   const openNewWorldKeyList = process.env.NEXT_PUBLIC_NEW_WORLD_KEY ? process.env.NEXT_PUBLIC_NEW_WORLD_KEY.split(',') : [];
+  const newWorldLocalKey = process.env.NEXT_PUBLIC_NEW_WORLD_LOCAL_KEY ? process.env.NEXT_PUBLIC_NEW_WORLD_LOCAL_KEY : '';
+  const newWorldLocalExpiredKey = process.env.NEXT_PUBLIC_NEW_WORLD_LOCAL_EXPIRED_KEY ? process.env.NEXT_PUBLIC_NEW_WORLD_LOCAL_EXPIRED_KEY : '';
+  const newWorldLocalDuing = process.env.NEXT_PUBLIC_NEW_WORLD_LOCAL_DURING ? Number(process.env.NEXT_PUBLIC_NEW_WORLD_LOCAL_DURING) : 0;
 
   const onClick: MenuProps['onClick'] = (e) => {
     if (['navi', 'search'].includes(e.key)) {
@@ -40,6 +43,13 @@ export default function Home() {
           // 判定步数已满，开启
           if (newWorldStepRef.current === openNewWorldKeyList.length) {
             setNewWorldFlg(true);
+            // local storage保存
+            if (newWorldLocalKey && newWorldLocalExpiredKey && newWorldLocalDuing > 0){              
+              const expirdDate = new Date().setDate(new Date().getDate() + newWorldLocalDuing);
+              localStorage.setItem(newWorldLocalKey, 'true');
+              localStorage.setItem(newWorldLocalExpiredKey, expirdDate.toString());
+            }
+            
             document.removeEventListener('keydown', handleKeyDown, false);
             api.open({
               message: '姿势正确',
@@ -91,6 +101,12 @@ export default function Home() {
       }, 3000)
     } else {
       setNewWorldFlg(false);
+      // local storage保存
+      if (newWorldLocalKey && newWorldLocalExpiredKey && newWorldLocalDuing > 0){              
+        const expirdDate = Date.now();
+        localStorage.setItem(newWorldLocalKey, 'false');
+        localStorage.setItem(newWorldLocalExpiredKey, expirdDate.toString());
+      }
       waitCloseNewWorldRef.current = false;
     }
   }
@@ -106,6 +122,7 @@ export default function Home() {
     return () => window.removeEventListener('resize', updateSize);
   }, []);
 
+  // 添加/删除监听键盘输入
   useEffect(() => {
     if (!newWorldFlg && openNewWorldKeyList.length > 0) {
       document.addEventListener('keydown', handleKeyDown, false)
@@ -114,6 +131,20 @@ export default function Home() {
       }
     }
   }, [newWorldFlg])
+
+  // 根据local storage设置newWorldFlg
+  useEffect(() => {
+    if (newWorldLocalKey && newWorldLocalExpiredKey){     
+      const localStorageNewWorldFlg = localStorage.getItem(newWorldLocalKey);
+      const newWorldLocalExpired = Number(localStorage.getItem(newWorldLocalExpiredKey));
+      if (localStorageNewWorldFlg) {
+        const newWorldFlgFromLocalStorage = JSON.parse(localStorageNewWorldFlg);
+        if (newWorldFlgFromLocalStorage === true && Date.now() < newWorldLocalExpired) {
+          setNewWorldFlg(true);
+        }
+      }
+    }
+  }, [])
 
   return (
     <>
