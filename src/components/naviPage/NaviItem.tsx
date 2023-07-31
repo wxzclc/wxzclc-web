@@ -10,11 +10,13 @@ interface naviItemProps {
 }
 
 const NaviItem: React.FC<naviItemProps> = (props) => {
-  const handleClick = (navi_url: string) => {
-    window.open(navi_url, '_blank');
+  const mouseDownHandler = ( e: React.MouseEvent, navi_url: string ) => {
+    if(e.button === 0 || e.button === 1) {
+      window.open(navi_url, '_blank');
+    }
   }
   return (
-    <div style={NaviItemStyle} onClick={() => handleClick(props.naviItem.url)}>
+    <div style={NaviItemStyle} onMouseDown={(e) => mouseDownHandler(e, props.naviItem.url)} >
       <Button type='text' style={NaviButtonStyle}  icon={
         <img src={props.naviItem.icon} style={{width: '3em', height: '3em'}}></img>
       }>

@@ -15,6 +15,7 @@ const BodyStyle: React.CSSProperties = {
 export const metadata: Metadata = {
   title: 'Diplozoon paradoxum',
   description: 'Diplozoon paradoxum',
+  robots: 'noindex'
 }
 
 export default function RootLayout({
