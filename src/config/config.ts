@@ -101,14 +101,14 @@ export const naviList: Array<NaviGroup> = [
       },
       {
         icon: 'https://mwbunko.com/apple-touch-icon.png',
-        title: 'MW文库',
+        title: 'MW文庫',
         key: 'mwbunko',
         newWorldFlg: false,
         url: 'https://mwbunko.com/'
       },
       {
         icon: 'https://www.shinchobunko-nex.jp/img/common/logo.png',
-        title: '新潮文库NEX',
+        title: '新潮文庫NEX',
         key: 'shinchobunko-nex',
         newWorldFlg: false,
         url: 'https://www.shinchobunko-nex.jp/'
@@ -129,7 +129,7 @@ export const naviList: Array<NaviGroup> = [
       },
       {
         icon: 'https://ga.sbcr.jp/wp-content/uploads/2021/02/GA_logo_card.jpg',
-        title: 'GA文库',
+        title: 'GA文庫',
         key: 'gabunko',
         newWorldFlg: false,
         url: 'https://ga.sbcr.jp/'
