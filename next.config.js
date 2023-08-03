@@ -7,8 +7,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  assetPrefix: isProd ? '/wxzclc-web' : '',
-  basePath: isProd ? '/wxzclc-web' : ''
+  // 使用github page默认域名时需以下配置
+  // assetPrefix: isProd ? '/wxzclc-web' : '',
+  // basePath: isProd ? '/wxzclc-web' : ''
 }
 
 module.exports = nextConfig
