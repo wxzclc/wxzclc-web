@@ -450,6 +450,20 @@ export const naviList: Array<NaviGroup> = [
         newWorldFlg: true,
         url: 'https://dukou.icu/'
       },
+      {
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAv0lEQVR4AWNwL/AZUDx4HDDqgFEH/M9iCADiC0D8nwB2wGUYSI6QfqgdATA9MI0LwJKE8QRCPgKpIdKsBSD1IA0JRCj+ANNAECM89IEIcxNAih/gkHwA9U0AWfGLiNYJ+OxgwOUyKic2nCGNzQEbaJXiQWYT4wABGjpAgKADaJ3vyXMAIo83EIkdaOGABpA8kbhhWDpAARS0RGIFihxASzzYsyH9C6IBL4oHvDIa8Op4oBskA98kG20Vjzpg1AEAOiepTO7/eKwAAAAASUVORK5CYII=',
+        title: '阿里云',
+        key: 'aliyun',
+        newWorldFlg: true,
+        url: 'https://www.aliyun.com/'
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+        title: 'ANTD',
+        key: 'antd',
+        newWorldFlg: true,
+        url: 'https://ant.design/components/overview-cn/'
+      },
     ]
   },
   {
