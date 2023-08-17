@@ -44,7 +44,7 @@ export const NaviButtonPStyle: React.CSSProperties = {
   margin: 0,
 };
 
-// 不显示项目的导航组
+// 不显示项目的导航组(天气加载中)
 export const unDisplayNaviGroupStyle: React.CSSProperties = {
   backgroundColor: 'rgba(230,230,250,0.4)',
   height: 'calc((100vh - 62px - 64px - 32px) / 3)',
@@ -52,6 +52,14 @@ export const unDisplayNaviGroupStyle: React.CSSProperties = {
   borderRadius: '5px',
   textAlign: 'center',
   lineHeight: '15em'
+};
+
+// 不显示项目的导航组(天气显示)
+export const weatherNaviGroupStyle: React.CSSProperties = {
+  backgroundColor: 'rgba(230,230,250,0.4)',
+  height: 'calc((100vh - 62px - 64px - 32px) / 3)',
+  width: '100%',
+  borderRadius: '5px',
 };
 
 // 显示项目的导航组

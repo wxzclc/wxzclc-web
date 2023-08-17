@@ -80,6 +80,7 @@ jobs:
           NEXT_PUBLIC_NEW_WORLD_LOCAL_KEY: ${{ secrets.NEXT_PUBLIC_NEW_WORLD_LOCAL_KEY }}
           NEXT_PUBLIC_NEW_WORLD_LOCAL_EXPIRED_KEY: ${{ secrets.NEXT_PUBLIC_NEW_WORLD_LOCAL_EXPIRED_KEY }}
           NEXT_PUBLIC_NEW_WORLD_LOCAL_DURING: ${{ secrets.NEXT_PUBLIC_NEW_WORLD_LOCAL_DURING }}
+          NEXT_PUBLIC_AMAP_KEY: ${{ secrets.NEXT_PUBLIC_AMAP_KEY }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact

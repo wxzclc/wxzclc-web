@@ -21,6 +21,17 @@ export type NaviItem = {
   url: string;
 }
 
+export type WeatherLive = {
+  weather: string,
+  temperature: string,
+  winddirection: string,
+  windpower: string,
+  humidity: string,
+  reporttime: string,
+  temperature_float: string,
+  humidity_float: string
+}
+
 export const searchList: Array<SearchItem> = [
   {
     dividerText: 'google搜索',

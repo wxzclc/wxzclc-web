@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { LoadingOutlined } from '@ant-design/icons';
 import { Space } from 'antd';
 import NaviItem from './NaviItem';
-import { unDisplayNaviGroupStyle, displayNaviGroupStyle } from '@/app/css/CSSProperties';
+import AmapWeather from '../amapWeather/amapWeather';
+import { displayNaviGroupStyle } from '@/app/css/CSSProperties';
 import { NaviGroup as NaviGroupType } from '@/config/config';
 
 interface naviGroupProps {
@@ -14,9 +15,7 @@ interface naviGroupProps {
 const NaviGroup: React.FC<naviGroupProps> = (props) => {
   const getNoDisplayNaviGroup = () => {
     return (
-      <div style={unDisplayNaviGroupStyle}>
-        <LoadingOutlined /> 施工中...
-      </div>
+        <AmapWeather />
     )
   }
   return (
