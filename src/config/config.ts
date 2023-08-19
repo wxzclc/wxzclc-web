@@ -252,7 +252,7 @@ export const naviList: Array<NaviGroup> = [
         title: '琉璃神社',
         key: 'hacg',
         newWorldFlg: true,
-        url: 'https://www.hacg.sbs/wp/'
+        url: 'https://www.hacg.lv/wp/'
       },
       {
         icon: 'https://blog.reimu.net/wp-content/uploads/2016/02/cropped-logo-32x32.png',
