@@ -345,6 +345,13 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://www.agemys.org/update'
       },
       {
+        icon: 'https://www.agemys.org/favicon.ico',
+        title: 'AGE地址发布',
+        key: 'age',
+        newWorldFlg: true,
+        url: 'https://github.com/agefanscom/website'
+      },
+      {
         icon: 'https://share.acgnx.se/images/favicon.ico',
         title: '末日资源库',
         key: 'acgnx',
