@@ -145,6 +145,13 @@ export const naviList: Array<NaviGroup> = [
         newWorldFlg: false,
         url: 'https://ga.sbcr.jp/'
       },
+      {
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACdklEQVR4AWIAAsaCmT7qhTN91gLaLwftTIIgCucB1wdr27Zt27uxbdu2bdvz36Ti9Fjxd86wUbdZXeNX1/gFky+y4UY2ybbVlPE2Slzgq21CBKlRW/izz3VYh76Yd73zuKRFhJuVlm4vqskAS2pxuKbhIAFYRAFYWgKSCkNR21Iqew0M9YGlb7BbUdmILHdxAeUN+TCbrPI4cQFrAtxiv9EYab4ySqMhRE5F4kwe+4i36lfBXZs9sAt/jYT8QFz6uVE0X0CKLVg4jsMd693aliFV2NBWCYvFgml+Bz4Uzd/cWQuW4tpM7ftAdI43WAqq0wTzfvG5ASHswt9oF/DM6fi81hP0/drtHC9vfnUqWHoHunHl1xZ9O2FeVTJYSuqy5uX54HWFJ5QISXfSvxW/cT8vWLlT1EdKp0mJ2tYysAwO9+PW/x3G+IK0kkiwDI8M4p3HRURkeUCIgBQ70fo0LMPdoL2eZWh4QLB3WjrraeyN9Yb/Qp4xxoQZ5UZpTpjjjsMyXCEFCfSI+2HOeeCD52VkVyTICkgtjqBlaoyAe7Z74Rn/C3WtFVADCaluLgb5ltvWu9QJeOZ8At6Jf0GekbNw0AvHjaKkLhs0NI8dDksLqGsth1KGR4cQnumGqGwvjIwOK+4ZOs6JCiBvJ8fg8ACic3xw33bfTLmHdgcQl+ePoZFByBGc5igu4JP3NVHl1DvUjTf+bhMdz5v/toPmTP2MB+XX89TpmLiAC9/Xo72neY7RCgSlOuCF80nVp92XrqdBvqChvWpGTHVzCS8fLzCxDXsFx6gPuG+337Aw7KH9QbhEfxY6S3TNhGaLdLktfnC62OH5GDP8h86EnOy8AAAAAElFTkSuQmCC',
+        title: '本日発売文庫新刊',
+        key: 'sumikko',
+        newWorldFlg: false,
+        url: 'https://bunko.sumikko.info/date-item/'
+      },
     ]
   },
   {
