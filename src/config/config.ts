@@ -180,6 +180,13 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://www.baidu.com/'
       },
       {
+        icon: 'https://a.amap.com/pc/static/favicon.ico',
+        title: '高德地图',
+        key: 'amap',
+        newWorldFlg: false,
+        url: 'https://www.amap.com/'
+      },
+      {
         icon: 'https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg',
         title: 'Bard',
         key: 'bard',
