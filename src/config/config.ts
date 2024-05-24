@@ -490,6 +490,13 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://dukou.icu/'
       },
       {
+        icon: 'https://d.zodacc2.com/favicon.ico',
+        title: 'ZodAccess',
+        key: 'zodAccess',
+        newWorldFlg: true,
+        url: 'https://zodacc.com/'
+      },
+      {
         icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAv0lEQVR4AWNwL/AZUDx4HDDqgFEH/M9iCADiC0D8nwB2wGUYSI6QfqgdATA9MI0LwJKE8QRCPgKpIdKsBSD1IA0JRCj+ANNAECM89IEIcxNAih/gkHwA9U0AWfGLiNYJ+OxgwOUyKic2nCGNzQEbaJXiQWYT4wABGjpAgKADaJ3vyXMAIo83EIkdaOGABpA8kbhhWDpAARS0RGIFihxASzzYsyH9C6IBL4oHvDIa8Op4oBskA98kG20Vjzpg1AEAOiepTO7/eKwAAAAASUVORK5CYII=',
         title: '阿里云',
         key: 'aliyun',
