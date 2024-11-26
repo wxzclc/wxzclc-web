@@ -468,13 +468,13 @@ export const naviList: Array<NaviGroup> = [
         newWorldFlg: false,
         url: 'https://www.taobao.com/'
       },
-      {
-        icon: 'https://pc-index-static.cdn.bcebos.com/pc-index-nav/00001/导航List_京东.png',
-        title: '京东',
-        key: 'jdshop',
-        newWorldFlg: false,
-        url: 'https://www.jd.com/?cu=true'
-      },
+      // {
+      //   icon: 'https://pc-index-static.cdn.bcebos.com/pc-index-nav/00001/导航List_京东.png',
+      //   title: '京东',
+      //   key: 'jdshop',
+      //   newWorldFlg: false,
+      //   url: 'https://www.jd.com/?cu=true'
+      // },
       {
         icon: 'https://www.jpgoodbuy.com/favicon.ico',
         title: 'jpgoodbuy',
