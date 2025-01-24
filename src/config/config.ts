@@ -311,6 +311,13 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://www.dlsite.com/maniax/'
       },
       {
+        icon: 'https://www.dlsite.com/images/web/common/favicon.ico',
+        title: 'みんなで翻訳',
+        key: 'dlsite-trans',
+        newWorldFlg: true,
+        url: 'https://www.dlsite.com/translator/work'
+      },
+      {
         icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABxUlEQVR4AY2SA4wcYRiG/yJmgxpxGtRuo25Q21bs1AxqB2VQ27Zt43xrDZdzO3xvvuTWu7l7kt/v8w3Z0N9q209xc6tPtbigaqEljbLkDLFd9iNhbkUTuq5DVdVmm2VZIMhlgm5xaGIFx6ODL4B1PI+r0Shu5LSDgoh29tlaO5MuQC6LmRbSTHf6cUGQ0oEMpmliiSuIEXV+JDUdachlipUNLavwwjAM5ELFTvsEdPnuwr9YArmQyzQLBIl4HZZRSKWcQPcXtTju4orujFxmojyKqsHxuBaL37noDlEI7bDcooW3vum1C/3P/4eQSJXNMOpK8biCQ4993/G2XgRRtoBhmCgkKCXRb8sX7HpQT6Eiif4XglymqgZy0Q0D8/b/wORd36BqOgqRYwrOvnCDIJcpip5X/fD1avRe+hzOQBSlOPOwHu//cCDIZbG4hjTf/4XRc+I93HjqRCl8oRiGzXsMOaqAIJcJUoqjRUODCsese3DMvofXH7x488mXaS/feXH09B8Mm3wbI+1M+mcjl939zW39lFLxIaHggVdstj0JSqA8tbu/+a1s0IyHbWe9cW4d/8/Pja7woyWNsrNtZ9CMB20bARU2pOeuJ+5zAAAAAElFTkSuQmCC',
         title: 'ZOD',
         key: 'zod',
