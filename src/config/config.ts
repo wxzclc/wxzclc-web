@@ -111,14 +111,14 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://dengekibunko.jp/'
       },
       {
-        icon: 'https://mwbunko.com/apple-touch-icon.png',
+        icon: '/img/navi_icon/mw_bunko.png',
         title: 'MW文庫',
         key: 'mwbunko',
         newWorldFlg: false,
         url: 'https://mwbunko.com/'
       },
       {
-        icon: 'https://www.shinchobunko-nex.jp/img/common/logo.png',
+        icon: '/img/navi_icon/shichonext_bunko.jpg',
         title: '新潮文庫NEX',
         key: 'shinchobunko-nex',
         newWorldFlg: false,
@@ -180,18 +180,11 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://www.baidu.com/'
       },
       {
-        icon: 'https://a.amap.com/pc/static/favicon.ico',
+        icon: '/img/navi_icon/gaode_map.jpg',
         title: '高德地图',
         key: 'amap',
         newWorldFlg: false,
         url: 'https://www.amap.com/'
-      },
-      {
-        icon: 'https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg',
-        title: 'Bard',
-        key: 'bard',
-        newWorldFlg: false,
-        url: 'https://bard.google.com/?hl=ja'
       },
       {
         icon: 'https://ssl.gstatic.com/keep/keep_2020q4v2.ico',
@@ -208,12 +201,33 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://dictionary.goo.ne.jp/'
       },
       {
-        icon: 'https://weblio.hs.llnwd.net/e7/img/favicon/cjjc.png',
+        icon: '/img/navi_icon/webilo_dic.png',
         title: 'weblio辞典',
         key: 'weblio',
         newWorldFlg: false,
         url: 'https://cjjc.weblio.jp/'
       },
+      {
+        icon: 'https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg',
+        title: 'Gemini',
+        key: 'gemini',
+        newWorldFlg: false,
+        url: 'https://gemini.google.com/app?hl=ja'
+      },
+      {
+        icon: '/img/navi_icon/chatgpt_icon.png',
+        title: 'ChatGPT',
+        key: 'chatgpt',
+        newWorldFlg: false,
+        url: 'https://chatgpt.com/'
+      },
+      {
+        icon: '/img/navi_icon/deepseek_icon.png',
+        title: 'DeepSeek',
+        key: 'deepseek',
+        newWorldFlg: false,
+        url: 'https://chat.deepseek.com/'
+      }
     ]
   },
   {
@@ -365,20 +379,20 @@ export const naviList: Array<NaviGroup> = [
         newWorldFlg: false,
         url: 'https://mora.jp/'
       },
-      {
-        icon: 'https://www.agemys.org/favicon.ico',
-        title: 'AGE',
-        key: 'age',
-        newWorldFlg: true,
-        url: 'https://www.agemys.org/update'
-      },
-      {
-        icon: 'https://www.agemys.org/favicon.ico',
-        title: 'AGE地址发布',
-        key: 'age',
-        newWorldFlg: true,
-        url: 'https://github.com/agefanscom/website'
-      },
+      // {
+      //   icon: 'https://www.agemys.org/favicon.ico',
+      //   title: 'AGE',
+      //   key: 'age',
+      //   newWorldFlg: true,
+      //   url: 'https://www.agemys.org/update'
+      // },
+      // {
+      //   icon: 'https://www.agemys.org/favicon.ico',
+      //   title: 'AGE地址发布',
+      //   key: 'age',
+      //   newWorldFlg: true,
+      //   url: 'https://github.com/agefanscom/website'
+      // },
       {
         icon: 'https://share.acgnx.se/images/favicon.ico',
         title: '末日资源库',
@@ -490,19 +504,19 @@ export const naviList: Array<NaviGroup> = [
         url: 'https://www.jpgoodbuy.com/index-list_trans.html'
       },
       {
-        icon: 'https://xn--gmq396grzd.com/favicon.ico',
+        icon: '/img/navi_icon/yun_icon.jpg',
         title: '云',
         key: 'yun',
         newWorldFlg: true,
         url: 'https://xn--gmq396grzd.com/'
       },
-      {
-        icon: 'https://dukou.icu/logo.ico',
-        title: 'Dukou',
-        key: 'dukou',
-        newWorldFlg: true,
-        url: 'https://dukou.icu/'
-      },
+      // {
+      //   icon: 'https://dukou.icu/logo.ico',
+      //   title: 'Dukou',
+      //   key: 'dukou',
+      //   newWorldFlg: true,
+      //   url: 'https://dukou.icu/'
+      // },
       {
         icon: 'https://d.zodacc2.com/favicon.ico',
         title: 'ZodAccess',
