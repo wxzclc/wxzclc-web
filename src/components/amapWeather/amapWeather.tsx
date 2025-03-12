@@ -102,8 +102,13 @@ const AmapWeather: React.FC<amapWeatherProps> = () => {
   useEffect(() => {
     if(adcode_locoal_key !== '') {
       const locoal_adcode = Number(localStorage.getItem(adcode_locoal_key));
-      if(!isNaN(locoal_adcode)) {
+      if(!isNaN(locoal_adcode) && locoal_adcode !== 0) {
+        console.log('set nj:',locoal_adcode)
         setInputAdcode(locoal_adcode);
+        setGetLocoalAdcodeDone(true);
+      } else {
+        console.log('set 110105')
+        setInputAdcode(110105);
         setGetLocoalAdcodeDone(true);
       }
     }
@@ -148,7 +153,7 @@ const AmapWeather: React.FC<amapWeatherProps> = () => {
                 okText='确定'
                 description={<>
                   <p>获取当前所在地天气，仅限国内。</p>
-                  <p>优先使用6位城市编码(adcode)，未输入或输入值无效则使用当前IP进行定位。</p>
+                  <p>优先使用6位城市编码(adcode)，未输入或输入值无效则使用当前IP进行定位，无法定位则查询默认地区（朝阳区）天气。</p>
                   <p>adcode查询请参阅<a href='https://lbs.amap.com/api/webservice/download' target='_blank' rel='nofollow noreferrer'>城市编码表</a></p></>}
                 icon={<CloudOutlined />}>
                 <Button shape='circle' icon={<QuestionOutlined />} size='small' ghost type='dashed' />
