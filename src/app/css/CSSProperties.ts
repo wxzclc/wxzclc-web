@@ -11,6 +11,23 @@ export const HeaderMenuItemStyle: React.CSSProperties = {
   width: 'auto',
 };
 
+// 首页临时CSS
+export const HomeOverlayStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  zIndex: 1,
+}
+
+export const HomeCenterboxStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: '50%', 
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+}
 
 // 搜索组件分割线
 export const SearchDividerStyle: React.CSSProperties = {

@@ -235,11 +235,11 @@ export const naviList: Array<NaviGroup> = [
     newWorldFlg: false,
     naviContent: [
       {
-        icon: 'https://www.lightnovel.us/_nuxt/img/57c2c3d.svg',
+        icon: 'https://www.lightnovel.fun/_nuxt/img/57c2c3d.svg',
         title: 'LK',
         key: 'lk',
         newWorldFlg: false,
-        url: 'https://www.lightnovel.us/category/3/106?type=1'
+        url: 'https://www.lightnovel.fun/cn/category/3/106?type=1'
       },
       {
         icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACI0lEQVR4AXXSA+h9VwAH8M+9777/r6e/beZmIw0ZM9KMzDk35VpamJE127Zte3u+Xu3ceTt1jK9OdPM79R1fDB3xw0QboKpCLWuKkrKirkONIloxK3uKtUs9Fl3+TJ3vXCFZ2aVqLucVacEsZ56HcdFcTmI6beYZXw4VybcjyQGbqJvLWRkujrNQJ1mY9xMO30K7xes/EC/i65EkyQrykqIKdZYzTPllHurmAWfsC4AG6IHPyXOSrAg0i5oG2c9zvhtz9u7sXA7AZ78QR1z7AiuXBuB4XjApGWb8kvHjjG9GnNVcvv1t4PFPOeZaTr6Z72e0k+BVMk8Zp8yLgP7DlKN3sWkx1z7HqQ39Qzaz3w6ymLVLWGiTFSRpwThv6KdM5hy8ifPv5cojeewTLrufpV3iBXaupb9AHVH+JiFllDXoE646klteZu+1wKFbSCvyiCV9opiyJivJ8obBtMm723ySq5/ikXN57nPe/Z5lS9i4ks4iakF7ibRqUpgVjGZcciAQtzjxFt77ksGAzeuJE0pkFQVUDYOyJC35Zcy2pbz5La2EacSmjfR79DqUqBtkFQQPkqIKbm7oA7e+SKfDimW0WiQtoijQjiOUAJQVcV0zyzhzLx77iPveo9shaqExrBT6vPp7LSqSVfHTfh4d4KYXeehdVq+h0w1migLqf5XhhE3LZqKz766fefcz+3z5hThqsdANhomI/H9Zu1y1Y50nfgULOx8mg/RwDQAAAABJRU5ErkJggg==',
