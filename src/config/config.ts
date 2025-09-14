@@ -280,7 +280,7 @@ export const naviList: Array<NaviGroup> = [
         title: '琉璃神社',
         key: 'hacg',
         newWorldFlg: true,
-        url: 'https://hacg.ing/wp/'
+        url: 'https://hacg.onl/wp'
       },
       {
         icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAflBMVEX+/v7///7w+fnW7Pun1flvwflIsvotqvrr9/v////1+/uk2PhGrPwAnPwAlf4Al/8Bmf8Bmf6c1Pj///273/oAlP4Amv9zxvMAovwAoP3b8PrA4/V4vPsAlv6Ly/t+y/Sh0vodpPgAkf4Bmv9XtvaOzfg6qfvL5vpcuvd4v/pA4uthAAABi0lEQVR4AX3RB2KDMAxAUYltNxi5LmSyV3v/C1Z2wJ3JzwTEY8EeYhBGcZKmSRyFmUAU90BsyZdDrgrSmgqVH14lT4DdCmC/jHzLy4KqLZ7RkUQAN8OhOZ7Op7OmLX3mxVi6o4AlLldjuxV3oG6MrQ0F2IQxaYdsmVutXaoxLGPcS/7lQ8h46KzGwljZl2ocHg+TtIdAPr//hVpHVpA5lf8JGBekAwH4Umr1QKB6NpAdaHwkVMWSQXjWv4VyF0adrxCVlRcG5Rq8MNYz8M8uhG9boRfoHRLaBUAf7IJOIdW78JUAL/Q8sAu/cgIPJOQF9HmBDxEX/irWbms1XpggUrvw7TL9VdQNhPmTO0l6tbe6KjdBjWRfygu0XEC8Fo+Fekb3uB8JVGcIiFH1SNAzTzIxDf8JIi6TzADwqOn/F04B/wKH4RXt3Mc3AQW2q3XBzqJpEy6nu0DnhGulsRC4jIyorDU5gccKpWY+vtgEVzAveU2auFIvvNnu7gU7K7J1fk/7Pp2a1W6G++sTpoE59ERv3Z0AAAAASUVORK5CYII=',
